@@ -6,7 +6,7 @@ import { Ionicons } from '@expo/vector-icons'
 export default function Footer() {
     return (
         // {/* Footer */ }
-        < View style={[styles.footer, commonStyles.border]} >
+        < View style={[styles.footer]} >
             {/* "All rights reserved" Section */}
             < Text style={styles.footerText} > All rights reserved</Text >
 
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         bottom: 0,
         left: 0,
         right: 0,
+        backgroundColor: "transparent"
     },
     footerText: {
         color: "black",

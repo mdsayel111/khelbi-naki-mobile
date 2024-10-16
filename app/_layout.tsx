@@ -146,7 +146,7 @@ export default function Layout() {
         <Navbar />
 
         {/* footer */}
-        <Footer />
+        {/* <Footer /> */}
 
         {/* toast */}
         <Toast />
