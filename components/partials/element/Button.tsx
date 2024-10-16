@@ -1,5 +1,6 @@
-import { GestureResponderEvent, Pressable, StyleProp, StyleSheet, TextStyle, ViewStyle } from "react-native";
+import { GestureResponderEvent, Pressable, StyleProp, StyleSheet, TextStyle, View, ViewStyle } from "react-native";
 import Text from "./CustomText";
+import color from "@/constants/color";
 
 type TButtonProps = {
     title: string;
@@ -10,7 +11,9 @@ type TButtonProps = {
 
 const Button = ({ title, onPress, style, textStyle }: TButtonProps) => {
     return (
+        // <View>
         <Pressable onPress={onPress} style={[styles.pressableContainer, style]}><Text style={{ ...styles.textStyle, ...textStyle }}>{title}</Text></Pressable>
+        // </View>
     );
 };
 
@@ -20,10 +23,12 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        borderColor: "black",
-        borderWidth: 1
+        alignSelf: 'center',
+        backgroundColor: color.primary,
+        paddingHorizontal: 4,
+        
     },
-    textStyle: { fontSize: 20, textAlign: "center" }
+    textStyle: { fontSize: 20, textAlign: "center", color: "white" }
 })
 
 export default Button;

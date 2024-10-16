@@ -75,7 +75,8 @@ const CheckOut = () => {
 const styles = StyleSheet.create({
     constainer: {
         width: "70%",
-        gap: 30
+        gap: 30,
+        marginHorizontal: "auto"
     },
     matchDetailsContainer: {
         display: "flex",

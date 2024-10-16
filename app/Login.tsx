@@ -25,17 +25,17 @@ const Login = () => {
   return (
     <ScreenContainer>
       <View style={styles.formContainer}>
-        <Form>
+        <Form title='LOGIN'>
           {/* <Text style={[{textAlign: "center", fontSize: 24}, fontStyle.customFont]}>Register</Text> */}
-          <Text style={{ textAlign: "center", fontSize: 24 }}>Login</Text>
+
           <Input placeholder="Email" value={email} setValue={setEmail} />
           <Input placeholder="Password" secureTextEntry={true} value={password} setValue={setPassword} />
-          <Button onPress={handleLogin} title="Login" textStyle={{}} />
+          <Button onPress={handleLogin} title="Login" />
         </Form>
-        <Pressable onPress={() => navigation.navigate("RecoverPassword" as never)}>
+        {/* <Pressable onPress={() => navigation.navigate("RecoverPassword" as never)}>
           <Text style={{ textAlign: "center", marginTop: 10 }}>Forget password?</Text>
         </Pressable>
-        <Text style={{ textAlign: "center", marginTop: 10 }}>Don't have account? Sign Up</Text>
+        <Text style={{ textAlign: "center", marginTop: 10 }}>Don't have account? Sign Up</Text> */}
       </View>
     </ScreenContainer>
   );
@@ -45,8 +45,6 @@ const styles = StyleSheet.create({
   formContainer: {
     width: "70%",
     marginHorizontal: "auto",
-    borderColor: "black",
-    borderWidth: 1,
     padding: 20,
   }
 });

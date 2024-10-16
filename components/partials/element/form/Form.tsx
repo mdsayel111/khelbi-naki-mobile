@@ -1,11 +1,33 @@
+import color from "@/constants/color";
 import React from "react";
-import { KeyboardAvoidingView, View } from "react-native";
+import { KeyboardAvoidingView, StyleSheet, Text, View } from "react-native";
 
 type TFormProps = {
+  title: string;
   children: React.ReactNode;
-  handleSubmit: (e: React.FormEvent<HTMLFormElement>) => void;
 };
 
-export default function Form({ children }: { children: React.ReactNode }) {
-  return <View style={{ display: "flex", gap: 20 }}>{children}</View>;
+export default function Form({ children, title }: TFormProps) {
+  return (
+    <View style={{ display: "flex", gap: 20 }}>
+      <Text style={styles.title}>{title}</Text>
+      <View style={styles.formContainer}>
+        {children}
+      </View>
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  title: {
+    textAlign: "center",
+    fontSize: 24,
+    color: "white",
+    // backgroundColor: color.secondary,
+    paddingVertical: 4
+  },
+  formContainer: {
+    backgroundColor: color.secondary,
+    gap: 20
+  }
+})
